@@ -1,0 +1,33 @@
+// sidenav style
+@use './components/nav';
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+:root{
+    --header-height: 3rem;
+    --nav-width: 12.5rem;
+    /*===== z index =====*/
+    --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*,::before,::after{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
