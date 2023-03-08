@@ -1,6 +1,9 @@
 $(function(){
     $("#navigation").load("../../component/sideNav.html");
 });
+$(function(){
+    $("#header").load("../../component/topNav.html");
+});
 $(document).ready(function() {
     $("#content").css("display", "none");
  
