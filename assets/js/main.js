@@ -1,3 +1,4 @@
+
 $(function () {
   $("#navigation").load("../../component/sideNav.html");
 });
@@ -333,3 +334,31 @@ svg3
   })
   .attr("text-anchor", "left")
   .style("alignment-baseline", "middle");
+
+
+
+  const links = document.querySelectorAll('a.nav__link');
+    console.log(links)
+  if (links.length) {
+    links.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        links.forEach((link) => {
+            link.classList.remove('active');
+        });
+        e.preventDefault();
+        link.classList.add('active');
+      });
+    });
+  }
+
+
+
+  var header = document.getElementById("navList");
+  var btns = header.getElementsByClassName("nav__link");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+    });
+  }
