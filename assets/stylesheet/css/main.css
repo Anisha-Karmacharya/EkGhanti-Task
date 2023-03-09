@@ -375,6 +375,50 @@
   z-index: 5;
 }
 
+.ticket {
+  margin-top: 1rem;
+  padding: 2em;
+}
+.ticket__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 1em;
+}
+.ticket__header--title {
+  font-weight: 500;
+  font-size: 18px;
+}
+.ticket__header--button .btn__search {
+  padding: 7px 15px;
+  gap: 10px;
+  background-color: #1266f1;
+  border-radius: 8px;
+}
+.ticket__header--button .btn__search button {
+  color: #ffffff;
+  font-weight: 500;
+}
+.ticket__table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.ticket__table th,
+.ticket__table td {
+  text-align: left;
+  padding: 0.75em 1em;
+}
+.ticket__table tr:nth-child(1) {
+  background-color: #e6ebf0;
+}
+.ticket__table td:last-child i {
+  padding: 5px;
+}
+.ticket__table tr:nth-child(even) {
+  background-color: #f2f4f6;
+}
+
 :root {
   --header-height: 3rem;
   --nav-width: 15rem;
