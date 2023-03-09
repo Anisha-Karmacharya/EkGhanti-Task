@@ -1,22 +1,51 @@
 .dashboard {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  canvas{
-    width:425px !important;
-    height:425px !important;
-  
-  }
   .visualData{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 365px);
     grid-column: 1/4;
+    row-gap: 1em;
+    margin-top: var(--header-height);
+    padding-left: 2em;
+    
+    #my_dataviz, #my_dataviz2, #my_dataviz3, .totalDatas{  
+      background-color: #fff;
+      border: 1px solid #e9e9e9;
+      border-radius: 10px;
+      width: 450px;
+      height: 350px;
+      padding: 1em;
+      .dataTitle{
+        border-bottom: 1px solid #e9e9e9;
+        padding: 10px;
+        p{
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
+    } 
+    .totalDatas{
+      
+      .totalData{
+        padding: 1.5em 1em 1em 1em;
+        font-weight: 600;
+        font-size: 16px;
+        border-bottom: 1px solid #e9e9e9;
+        span{
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
   }
   .dashboard__Form {
     background-color: #fff;
     grid-column: 4/6;
     height: 100vh;
     overflow: hidden;
-    padding: 5em 1em;
+    padding: 5em 1em 5em 3em;
     .form {
       display: flex;
       flex-direction: column;
