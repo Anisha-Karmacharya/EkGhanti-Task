@@ -169,6 +169,15 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
+.dashboard canvas {
+  width: 425px !important;
+  height: 425px !important;
+}
+.dashboard .visualData {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 1/4;
+}
 .dashboard .dashboard__Form {
   background-color: #fff;
   grid-column: 4/6;
@@ -343,7 +352,6 @@ body {
 
 html, body {
   height: 100%;
-  overflow: hidden;
 }
 
 a {

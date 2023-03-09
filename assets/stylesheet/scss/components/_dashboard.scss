@@ -1,19 +1,16 @@
-// .dashboardContent {
-//   .visualData{
-//     display: flex;
-//     flex-wrap: wrap;
-
-//     grid-column: 1/3;
-//     #chart1, #chart2, #chart3{
-//         padding: 3em;
-//         width: 400px !important;
-//         height: 400px !important;
-//     }
-//   }
-// }
 .dashboard {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  canvas{
+    width:425px !important;
+    height:425px !important;
+  
+  }
+  .visualData{
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1/4;
+  }
   .dashboard__Form {
     background-color: #fff;
     grid-column: 4/6;
