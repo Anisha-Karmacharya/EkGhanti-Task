@@ -407,7 +407,7 @@
     width: 35%;
   }
 }
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1500px) {
   body {
     font-size: 14px;
   }
@@ -424,7 +424,7 @@
     position: relative;
     vertical-align: middle;
     overflow: hidden;
-    width: 350px;
+    width: 400px;
     height: 350px;
   }
   .dashboard .visualData #my_dataviz .svgContent,
@@ -432,7 +432,7 @@
 .dashboard .visualData #my_dataviz3 .svgContent {
     display: inline-block;
     position: absolute;
-    width: 400px;
+    width: 450px;
     height: 350px;
   }
   .dashboard .visualData #my_dataviz .svgContent__first,
@@ -446,7 +446,50 @@
     transform: translateX(-45px);
   }
   .dashboard .visualData .totalDatas {
-    width: 350px;
+    width: 400px;
+    height: 350px;
+  }
+}
+@media screen and (min-width: 1750px) {
+  body {
+    font-size: 14px;
+  }
+  .dashboard {
+    gap: 1em;
+  }
+  .dashboard .visualData {
+    width: 60%;
+  }
+  .dashboard .visualData #my_dataviz,
+.dashboard .visualData #my_dataviz2,
+.dashboard .visualData #my_dataviz3 {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    overflow: hidden;
+    width: 500px;
+    height: 350px;
+  }
+  .dashboard .visualData #my_dataviz .svgContent,
+.dashboard .visualData #my_dataviz2 .svgContent,
+.dashboard .visualData #my_dataviz3 .svgContent {
+    display: inline-block;
+    position: absolute;
+    width: 550px;
+    height: 350px;
+  }
+  .dashboard .visualData #my_dataviz .svgContent__first,
+.dashboard .visualData #my_dataviz2 .svgContent__first,
+.dashboard .visualData #my_dataviz3 .svgContent__first {
+    transform: translateX(-20px);
+  }
+  .dashboard .visualData #my_dataviz .svgContent__third,
+.dashboard .visualData #my_dataviz2 .svgContent__third,
+.dashboard .visualData #my_dataviz3 .svgContent__third {
+    transform: translateX(-45px);
+  }
+  .dashboard .visualData .totalDatas {
+    width: 500px;
     height: 350px;
   }
 }

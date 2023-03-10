@@ -203,7 +203,7 @@
   }
 }
 }
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1500px) {
   body{
     font-size: 14px;
 }
@@ -218,13 +218,13 @@
         position: relative;
         vertical-align: middle; 
         overflow: hidden;
-        width: 350px;
+        width: 400px;
         height: 350px;
         .svgContent{
           display: inline-block;
           position: absolute;
           
-          width: 400px;
+          width: 450px;
           height: 350px;
           &__first{
             transform: translateX(-20px);
@@ -236,7 +236,46 @@
 
       }
       .totalDatas {
-        width: 350px;
+        width: 400px;
+        height: 350px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1750px) {
+  body{
+    font-size: 14px;
+}
+  .dashboard {
+    gap: 1em;
+    .visualData {
+      width: 60%;
+      #my_dataviz,
+      #my_dataviz2,
+      #my_dataviz3{
+        display: inline-block;
+        position: relative;
+        vertical-align: middle; 
+        overflow: hidden;
+        width: 500px;
+        height: 350px;
+        .svgContent{
+          display: inline-block;
+          position: absolute;
+          
+          width: 550px;
+          height: 350px;
+          &__first{
+            transform: translateX(-20px);
+          }
+          &__third{
+            transform: translateX(-45px);
+          }
+        }
+
+      }
+      .totalDatas {
+        width: 500px;
         height: 350px;
       }
     }
