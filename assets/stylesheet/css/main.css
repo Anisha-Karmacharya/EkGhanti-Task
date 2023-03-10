@@ -378,8 +378,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: #fcfcfc;
   padding: 1em;
+  border-radius: 10px 10px 0 0;
 }
 .ticket__header--title {
   font-weight: 500;
@@ -398,6 +399,7 @@
 .ticket__table {
   border-collapse: collapse;
   width: 100%;
+  margin: 0;
 }
 .ticket__table th,
 .ticket__table td {
@@ -416,10 +418,14 @@
 .ticket #pageNav {
   display: flex;
   justify-content: flex-end;
+  background-color: #fcfcfc;
+  border-radius: 0 0 10px 10px;
+  border-bottom: 0.5px solid rgba(175, 175, 175, 0.5882352941);
 }
 .ticket #pageNav a {
   padding: 7px 15px;
   margin: 0.5em;
+  color: #1E1E1E;
 }
 .ticket #pageNav .activePage {
   background-color: #1266f1;
