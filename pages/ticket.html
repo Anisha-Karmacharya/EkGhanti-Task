@@ -14,7 +14,10 @@
     />
     <link rel="stylesheet" href="../assets/stylesheet/css/main.css" />
     <!-- icons -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
     <script
       src="https://kit.fontawesome.com/78dd5d4ce5.js"
       crossorigin="anonymous"
@@ -25,7 +28,62 @@
       <div class="header__left">Ticket</div>
       <div class="header__right" id="header__right"></div>
     </header>
-    <div id="navigation"></div>
+    <div class="l-navbar" id="nav-bar">
+      
+  <nav class="nav">
+    <div>
+      <a href="#" class="nav__logo">
+        <img class="nav__logo-name" src="../assets/images/logo.png" />
+      </a>
+
+      <div class="nav__list" id="navList">
+        <a href="../dashboard.html" class="nav__link ">
+          <i class="fa-solid fa-chart-line nav__icon"></i>
+          <span class="nav__name">Dashboard</span>
+        </a>
+
+        <a href="#" class="nav__link">
+          <i class="fa-solid fa-user nav__icon"></i>
+          <span class="nav__name">User</span>
+        </a>
+
+        <a href="#" class="nav__link">
+          <i class="fa-solid fa-users nav__icon"></i>
+          <span class="nav__name">Groups</span>
+        </a>
+
+        <a href="#" class="nav__link">
+          <i class="fa-solid fa-sheet-plastic nav__icon"></i>
+          <span class="nav__name">Projects</span>
+        </a>
+
+        <a href="#" class="nav__link">
+          <i class="fa-regular fa-hourglass nav__icon"></i>
+          <span class="nav__name">Ticket Status</span>
+        </a>
+
+        <a href="#" class="nav__link">
+          <i class="fa-solid fa-user-tag nav__icon"></i>
+          <span class="nav__name">Role</span>
+        </a>
+        <a href="#" class="nav__link active">
+          <i class="fa-solid fa-ticket-simple nav__icon"></i>
+          <span class="nav__name">Ticket</span>
+        </a>
+        <a href="#" class="nav__link">
+          <i class="fa-solid fa-envelope nav__icon"></i>
+          <span class="nav__name">SMS/Email</span>
+        </a>
+      </div>
+    </div>
+    <a href="#" class="nav__link">
+      <i class="fa-solid fa-arrow-right-from-bracket nav__icon"></i>
+      <span class="nav__name">Log Out</span>
+  </a>
+  </nav>
+
+
+    </div>
 
     <div id="ticket" class="ticket">
       <div class="ticket__header">
@@ -50,10 +108,15 @@
           id="offcanvasRight"
           aria-labelledby="offcanvasRightLabel"
         >
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasLabel">Add New Ticket</h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Add New Ticket</h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
           <div class="offcanvas-body">
             <form
               name="register"
@@ -483,9 +546,7 @@
       </div>
     </div>
   </body>
-<script>
-
-</script>
+  <script></script>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
     integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
@@ -499,5 +560,5 @@
     crossorigin="anonymous"
   ></script>
   <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/table.js"></script>
+  <script src="../assets/js/pagination.js"></script>
 </html>

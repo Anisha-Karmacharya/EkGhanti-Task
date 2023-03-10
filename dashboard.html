@@ -8,7 +8,10 @@
     <!-- custom css -->
     <link rel="stylesheet" href="./assets/stylesheet/css/main.css" />
     <!-- icons -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
     <script
       src="https://kit.fontawesome.com/78dd5d4ce5.js"
       crossorigin="anonymous"
@@ -21,19 +24,81 @@
       <div class="header__left">Dashboard</div>
       <div class="header__right" id="header__right"></div>
     </header>
-    <div id="navigation"></div>
+    <div class="l-navbar" id="nav-bar">
+
+      <nav class="nav">
+        <div>
+          <a href="#" class="nav__logo">
+            <img class="nav__logo-name" src="../assets/images/logo.png" />
+          </a>
+    
+          <div class="nav__list" id="navList">
+            <a href="" class="nav__link active">
+              <i class="fa-solid fa-chart-line nav__icon"></i>
+              <span class="nav__name">Dashboard</span>
+            </a>
+    
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-user nav__icon"></i>
+              <span class="nav__name">User</span>
+            </a>
+    
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-users nav__icon"></i>
+              <span class="nav__name">Groups</span>
+            </a>
+    
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-sheet-plastic nav__icon"></i>
+              <span class="nav__name">Projects</span>
+            </a>
+    
+            <a href="#" class="nav__link">
+              <i class="fa-regular fa-hourglass nav__icon"></i>
+              <span class="nav__name">Ticket Status</span>
+            </a>
+    
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-user-tag nav__icon"></i>
+              <span class="nav__name">Role</span>
+            </a>
+            <a href="./pages/ticket.html" class="nav__link">
+              <i class="fa-solid fa-ticket-simple nav__icon"></i>
+              <span class="nav__name">Ticket</span>
+            </a>
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-envelope nav__icon"></i>
+              <span class="nav__name">SMS/Email</span>
+            </a>
+          </div>
+        </div>
+        <a href="#" class="nav__link">
+          <i class="fa-solid fa-arrow-right-from-bracket nav__icon"></i>
+          <span class="nav__name">Log Out</span>
+      </a>
+      </nav>
+    
+    
+
+    </div>
     <div class="dashboard">
-      <section class="visualData"> 
-         <div id="my_dataviz"><div class="dataTitle"><p>IME Report</p></div></div>
-         <div id="my_dataviz2"><div class="dataTitle"><p>Ticket Status</p></div></div>
-         <div id="my_dataviz3"><div class="dataTitle"><p>Vertical</p></div></div>
-         <div class="totalDatas">
+      <section class="visualData">
+        <div id="my_dataviz">
+          <div class="dataTitle"><p>IME Report</p></div>
+        </div>
+        <div id="my_dataviz2">
+          <div class="dataTitle"><p>Ticket Status</p></div>
+        </div>
+        <div id="my_dataviz3">
+          <div class="dataTitle"><p>Vertical</p></div>
+        </div>
+        <div class="totalDatas">
           <div class="dataTitle"><p>Total</p></div>
           <div class="totalData">IME Report: <span>50</span></div>
           <div class="totalData">Ticket Status: <span>50</span></div>
           <div class="totalData">Vertical Report: <span>50</span></div>
         </div>
-        </section>
+      </section>
       <section class="dashboard__Form">
         <div class="container wrapper-column">
           <form
@@ -41,11 +106,13 @@
             class="form"
             onsubmit="event.preventDefault(); return validateForm(this);"
           >
-          <div class="buttonTop">
-            <div class="btn__export">
-               <button type="submit"><i class="uil uil-export"></i> Export</button>
-             </div>
-          </div>
+            <div class="buttonTop">
+              <div class="btn__export">
+                <button type="submit">
+                  <i class="uil uil-export"></i> Export
+                </button>
+              </div>
+            </div>
 
             <div class="form-section">
               <div class="form-control">
@@ -181,5 +248,5 @@
   ></script>
 
   <script src="/assets/js/main.js"></script>
-  
+  <script src="/assets/js/chart.js"></script>
 </html>

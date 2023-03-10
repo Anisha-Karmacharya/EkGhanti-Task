@@ -136,17 +136,16 @@ body {
     transition: 0.3s;
 
     &:hover {
-      color: #8d8d8d;
+      color: #676767
     }
+
   }
 
   &__icon {
     font-size: 1.25rem;
   }
 }
-// .show {
-//   left: 0;
-// }
+
 
 .body-pd {
   padding-left: calc(var(--nav-width));
