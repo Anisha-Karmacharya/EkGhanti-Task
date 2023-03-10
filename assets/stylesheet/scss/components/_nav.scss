@@ -144,9 +144,9 @@ body {
     font-size: 1.25rem;
   }
 }
-.show {
-  left: 0;
-}
+// .show {
+//   left: 0;
+// }
 
 .body-pd {
   padding-left: calc(var(--nav-width));
@@ -182,9 +182,9 @@ body {
   }
 
   /*Show navbar desktop*/
-  .show {
-    width: calc(var(--nav-width) + 156px);
-  }
+  // .show {
+  //   width: calc(var(--nav-width) + 156px);
+  // }
 
   /*Add padding body desktop*/
   .body-pd {
