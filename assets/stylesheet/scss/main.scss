@@ -26,7 +26,26 @@
    -moz-osx-font-smoothing: grayscale;
    text-rendering: optimizeLegibility;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
 html{
     scroll-behavior: smooth;
 }

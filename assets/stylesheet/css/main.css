@@ -413,9 +413,26 @@
 .ticket__table tr:nth-child(even) {
   background-color: #f2f4f6;
 }
+.ticket #pageNav {
+  display: flex;
+  justify-content: flex-end;
+}
+.ticket #pageNav a {
+  padding: 7px 15px;
+  margin: 0.5em;
+}
+.ticket #pageNav .activePage {
+  background-color: #1266f1;
+  padding: 7px 15px;
+  border-radius: 25px;
+  color: #fff;
+}
 
 .offcanvas {
   width: 35%;
+}
+.offcanvas-header {
+  padding: 1em;
 }
 
 :root {
@@ -438,6 +455,27 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
 }
 
 html {

@@ -27,7 +27,6 @@
   &__table {
     border-collapse: collapse;
     width: 100%;
-
     th,
     td {
       text-align: left;
@@ -45,7 +44,25 @@
       background-color: #f2f4f6;
     }
   }
+  #pageNav {
+    display: flex;
+    justify-content: flex-end;
+    a{
+      padding: 7px 15px;
+      margin: 0.5em;
+    }
+    .activePage {
+      background-color: #1266f1;
+      padding: 7px 15px;
+      border-radius: 25px;
+      color: #fff;
+    }
+  }
 }
-.offcanvas{
+.offcanvas {
   width: 35%;
+  &-header{
+    padding:  1em;
+
+  }
 }
