@@ -137,16 +137,14 @@
                 />
                 <label for="group" class="form-label">Group</label>
               </div>
-              <div class="form-control">
-                <input
-                  type="text"
-                  name="assignedTo"
-                  placeholder="assignedTo"
-                  id="assignedTo"
-                  class="form-input"
-                  autocomplete="off"
-                />
-                <label for="assignedTo" class="form-label">Assigned To</label>
+              <div class="form-control custom-select">
+                <select id="assignedTo" name="assignedTo" class="form-input">
+                  <option value="">Assigned To</option>
+                  <option value="person1">Person 1</option>
+                  <option value="person2">Person 2</option>
+                  <option value="person3">Person 3</option>
+                  <option value="person4">Person 4</option>
+                </select>            
               </div>
             </div>
             <div class="form-section">
@@ -207,16 +205,12 @@
                 />
                 <label for="to" class="form-label">To</label>
               </div>
-              <div class="form-control">
-                <input
-                  type="text"
-                  name="status"
-                  placeholder="status"
-                  id="status"
-                  class="form-input"
-                  autocomplete="off"
-                />
-                <label for="status" class="form-label">Ticket Status</label>
+              <div class="form-control custom-select">
+                <select id="status" name="status" class="form-input">
+                  <option value="">Ticket Status</option>
+                  <option value="status1">Status 1</option>
+                  <option value="status2">Status 2</option>
+                </select>            
               </div>
             </div>
 
@@ -249,4 +243,5 @@
 
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/chart.js"></script>
+  <script src="/assets/js/customSelect.js"></script>
 </html>
