@@ -123,9 +123,6 @@
   margin-bottom: 0.75rem;
   transition: 0.3s;
 }
-.nav__link:hover {
-  color: #676767;
-}
 .nav__icon {
   font-size: 1.25rem;
 }
