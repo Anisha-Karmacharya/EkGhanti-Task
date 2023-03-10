@@ -21,6 +21,30 @@ $(document).ready(function () {
   }
 });
 
+$(document).ready(function(){
+  $('#ticketTable').after('<div id="pageNav"></div>');
+  var visibleRows = 5;
+  var totalRows = $('#ticketTable tbody tr').length;
+  var numPages = totalRows/visibleRows;
+  for(i = 0;i < numPages;i++) {
+      var pageNum = i + 1;
+      $('#pageNav').append('<a href="#" rel="'+i+'">'+pageNum+'</a> ');
+  }
+  $('#ticketTable tbody tr').hide();
+  $('#ticketTable tbody tr').slice(0, visibleRows).show();
+  $('#pageNav a:first').addClass('activePage');
+  $('#pageNav a').bind('click', function(){
+
+      $('#pageNav a').removeClass('activePage');
+      $(this).addClass('activePage');
+      var currPage = $(this).attr('rel');
+      var startItem = currPage * visibleRows;
+      var endItem = startItem + visibleRows;
+      $('#ticketTable tbody tr').css('opacity','0.0').hide().slice(startItem, endItem).
+      css('display','table-row').animate({opacity:1}, 300);
+  });
+});
+
 // #CHART
 // set the dimensions and margins of the graph
 var width = 450;
@@ -335,30 +359,3 @@ svg3
   .attr("text-anchor", "left")
   .style("alignment-baseline", "middle");
 
-
-
-  const links = document.querySelectorAll('a.nav__link');
-    console.log(links)
-  if (links.length) {
-    links.forEach((link) => {
-      link.addEventListener('click', (e) => {
-        links.forEach((link) => {
-            link.classList.remove('active');
-        });
-        e.preventDefault();
-        link.classList.add('active');
-      });
-    });
-  }
-
-
-
-  var header = document.getElementById("navList");
-  var btns = header.getElementsByClassName("nav__link");
-  for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-    });
-  }
