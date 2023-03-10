@@ -70,7 +70,143 @@
 
   }
 }
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1300px) {
+  body, .form-label, .form-input, .select-selected, .header__right{
+    font-size: 12px !important;
+}
+ .header__right .userDetail .userName{
+  font-size: 14px !important;
+}
+.header__left{
+  font-size: 18px !important;
+}
+.header__right .userDetail .userRole {
+    font-size: 12px;
+}
+  .dashboard {
+    display: flex;
+    justify-content: space-between;
+    .visualData {
+      display: flex;
+      flex-direction: column;
+      #my_dataviz,
+      #my_dataviz2,
+      #my_dataviz3{
+        background-color: #fff;
+        border: 1px solid #e9e9e9;
+        border-radius: 10px;
+        width: 450px;
+        height: 300px;
+        padding: 1em;
+        .svgContent{
+          display: inline-block;
+          position: absolute;
+          width: 450px;
+          height: 300px;
+          &__first{
+            transform: translateX(-20px);
+          }
+          &__third{
+            transform: translateX(-45px);
+          }
+        }
+      }
+      .totalDatas {
+        background-color: #fff;
+        border-radius: 10px;
+        width: 450px;
+        height: 300px;
+        padding: 1em;
+        .dataTitle {
+          border-bottom: 1px solid #e9e9e9;
+          padding: 10px;
+          p {
+            font-size: 18px;
+            font-weight: 500;
+            color: #024B8D;
+          }
+        }
+        .totalData {
+          padding: 1.5em 1em 1em 1em;
+          font-weight: 400;
+          font-size: 16px;
+          border-bottom: 1px solid #e9e9e9;
+          &:nth-child(even){
+            background: #F8F8F8;
+  
+          }
+          span {
+            font-size: 14px;
+            font-weight: 700;
+            float: right;
+            color: #024B8D;
+          }
+        }
+      }
+    }
+    .dashboard__Form {
+      background-color: #fff;
+      width: 60%;
+      height: 100vh;
+      overflow: hidden;
+      padding: 5em 1em 5em 3em;
+  
+    }
+  }
+}
+@media screen and (min-width: 1350px) {
+  body, .form-label, .form-input, .select-selected, .header__right{
+    font-size: 14px !important;
+}
+ .header__right .userDetail .userName{
+  font-size: 14px !important;
+}
+.header__left{
+  font-size: 20px !important;
+}
+.header__right .userDetail .userRole {
+    font-size: 12px;
+}
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  .visualData {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 365px);
+    width: 60%;
+    #my_dataviz,
+    #my_dataviz2,
+    #my_dataviz3{
+      width: 325px;
+      height: 350px;
+      .svgContent{
+        width: 375px;
+        height: 350px;
+        &__first{
+          transform: translateX(-20px);
+        }
+        &__third{
+          transform: translateX(-45px);
+        }
+      }
+    }
+    .totalDatas {
+      width: 325px;
+      height: 350px;
+      padding: 1em;
+    }
+  }
+  .dashboard__Form {
+    width: 35%;
+
+  }
+}
+}
+@media screen and (min-width: 1700px) {
+  body{
+    font-size: 14px;
+}
   .dashboard {
     gap: 1em;
     .visualData {
@@ -84,7 +220,6 @@
         overflow: hidden;
         width: 350px;
         height: 350px;
-        padding: 1em;
         .svgContent{
           display: inline-block;
           position: absolute;

@@ -176,6 +176,20 @@
     padding-left: calc(var(--nav-width) + 188px);
   }
 }
+@media screen and (max-width: 1150px) {
+  .header {
+    height: calc(var(--header-height) + 1rem);
+    padding: 0 10rem 0 2rem;
+    margin-left: 20em;
+  }
+  .header__img {
+    width: 40px;
+    height: 40px;
+  }
+  .header__img img {
+    width: 45px;
+  }
+}
 .dashboard {
   display: flex;
   justify-content: space-between;
@@ -251,7 +265,152 @@
   padding: 5em 1em 5em 3em;
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1300px) {
+  body, .form-label, .form-input, .select-selected, .header__right {
+    font-size: 12px !important;
+  }
+  .header__right .userDetail .userName {
+    font-size: 14px !important;
+  }
+  .header__left {
+    font-size: 18px !important;
+  }
+  .header__right .userDetail .userRole {
+    font-size: 12px;
+  }
+  .dashboard {
+    display: flex;
+    justify-content: space-between;
+  }
+  .dashboard .visualData {
+    display: flex;
+    flex-direction: column;
+  }
+  .dashboard .visualData #my_dataviz,
+.dashboard .visualData #my_dataviz2,
+.dashboard .visualData #my_dataviz3 {
+    background-color: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px;
+    width: 450px;
+    height: 300px;
+    padding: 1em;
+  }
+  .dashboard .visualData #my_dataviz .svgContent,
+.dashboard .visualData #my_dataviz2 .svgContent,
+.dashboard .visualData #my_dataviz3 .svgContent {
+    display: inline-block;
+    position: absolute;
+    width: 450px;
+    height: 300px;
+  }
+  .dashboard .visualData #my_dataviz .svgContent__first,
+.dashboard .visualData #my_dataviz2 .svgContent__first,
+.dashboard .visualData #my_dataviz3 .svgContent__first {
+    transform: translateX(-20px);
+  }
+  .dashboard .visualData #my_dataviz .svgContent__third,
+.dashboard .visualData #my_dataviz2 .svgContent__third,
+.dashboard .visualData #my_dataviz3 .svgContent__third {
+    transform: translateX(-45px);
+  }
+  .dashboard .visualData .totalDatas {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 450px;
+    height: 300px;
+    padding: 1em;
+  }
+  .dashboard .visualData .totalDatas .dataTitle {
+    border-bottom: 1px solid #e9e9e9;
+    padding: 10px;
+  }
+  .dashboard .visualData .totalDatas .dataTitle p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #024B8D;
+  }
+  .dashboard .visualData .totalDatas .totalData {
+    padding: 1.5em 1em 1em 1em;
+    font-weight: 400;
+    font-size: 16px;
+    border-bottom: 1px solid #e9e9e9;
+  }
+  .dashboard .visualData .totalDatas .totalData:nth-child(even) {
+    background: #F8F8F8;
+  }
+  .dashboard .visualData .totalDatas .totalData span {
+    font-size: 14px;
+    font-weight: 700;
+    float: right;
+    color: #024B8D;
+  }
+  .dashboard .dashboard__Form {
+    background-color: #fff;
+    width: 60%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 5em 1em 5em 3em;
+  }
+}
+@media screen and (min-width: 1350px) {
+  body, .form-label, .form-input, .select-selected, .header__right {
+    font-size: 14px !important;
+  }
+  .header__right .userDetail .userName {
+    font-size: 14px !important;
+  }
+  .header__left {
+    font-size: 20px !important;
+  }
+  .header__right .userDetail .userRole {
+    font-size: 12px;
+  }
+  .dashboard {
+    display: flex;
+    justify-content: space-between;
+  }
+  .dashboard .visualData {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 365px);
+    width: 60%;
+  }
+  .dashboard .visualData #my_dataviz,
+.dashboard .visualData #my_dataviz2,
+.dashboard .visualData #my_dataviz3 {
+    width: 325px;
+    height: 350px;
+  }
+  .dashboard .visualData #my_dataviz .svgContent,
+.dashboard .visualData #my_dataviz2 .svgContent,
+.dashboard .visualData #my_dataviz3 .svgContent {
+    width: 375px;
+    height: 350px;
+  }
+  .dashboard .visualData #my_dataviz .svgContent__first,
+.dashboard .visualData #my_dataviz2 .svgContent__first,
+.dashboard .visualData #my_dataviz3 .svgContent__first {
+    transform: translateX(-20px);
+  }
+  .dashboard .visualData #my_dataviz .svgContent__third,
+.dashboard .visualData #my_dataviz2 .svgContent__third,
+.dashboard .visualData #my_dataviz3 .svgContent__third {
+    transform: translateX(-45px);
+  }
+  .dashboard .visualData .totalDatas {
+    width: 325px;
+    height: 350px;
+    padding: 1em;
+  }
+  .dashboard .dashboard__Form {
+    width: 35%;
+  }
+}
+@media screen and (min-width: 1700px) {
+  body {
+    font-size: 14px;
+  }
   .dashboard {
     gap: 1em;
   }
@@ -267,7 +426,6 @@
     overflow: hidden;
     width: 350px;
     height: 350px;
-    padding: 1em;
   }
   .dashboard .visualData #my_dataviz .svgContent,
 .dashboard .visualData #my_dataviz2 .svgContent,
@@ -446,11 +604,6 @@
   z-index: 5;
 }
 
-@media screen and (max-width: 1700px) {
-  body {
-    font-size: 14px;
-  }
-}
 .btn__export {
   padding: 7px 15px;
   gap: 10px;
