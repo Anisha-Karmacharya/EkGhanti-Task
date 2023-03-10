@@ -1,0 +1,41 @@
+.btn {
+    &__export{
+      padding: 7px 15px;
+      gap: 10px;
+      background-color: #000000;
+      border-radius: 8px;
+      button {
+        color: #ffffff;
+        font-weight: 500;
+      }
+    }
+    &__view {
+        padding: 7px 15px;
+        gap: 10px;
+        border: 1px solid #003893;
+        border-radius: 8px;
+        button {
+          color: #003893;
+          font-weight: 500;
+        }
+      }
+    &__search {
+        padding: 7px 15px;
+        gap: 10px;
+        background-color: #1266f1;
+        border-radius: 8px;
+        button {
+          color: #ffffff;
+          font-weight: 500;
+        }
+      }
+    &__clear {
+      button {
+        color: #d70000;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  
+

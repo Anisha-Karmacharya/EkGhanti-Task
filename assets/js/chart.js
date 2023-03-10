@@ -14,6 +14,7 @@ var svg = d3
   .attr("width", width)
   .attr("height", height)
   .attr("viewBox", "0 300 700 250")
+  .attr("class", "svgContent svgContent__first")
   .append("g")
   .attr("transform", "translate(" + width / 2 + "," + "350" + ")");
 
@@ -102,9 +103,8 @@ svg
   .attr("text-anchor", "left")
   .style("alignment-baseline", "middle");
 
-// --++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// set the dimensions and margins of the graph
 
+// ---------------------Second Chart----------------------
 // set the dimensions and margins of the graph
 var width = 450;
 height = 350;
@@ -119,6 +119,7 @@ var svg2 = d3
   .append("svg")
   .attr("width", width)
   .attr("height", height)
+  .attr("class", "svgContent svgContent__second")
   .attr("viewBox", "0 300 700 250")
   .append("g")
   .attr("transform", "translate(" + width / 2 + "," + "350" + ")");
@@ -218,6 +219,7 @@ var svg3 = d3
   .append("svg")
   .attr("width", width)
   .attr("height", height)
+  .attr("class", "svgContent svgContent__third")
   .attr("viewBox", "25 300 700 250")
   .append("g")
   .attr("transform", "translate(" + width / 2 + "," + "350" + ")");

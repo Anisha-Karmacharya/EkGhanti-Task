@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 0 4rem 0 2rem;
   background-color: var(--white-color);
   z-index: var(--z-fixed);
   transition: 0.5s;
@@ -130,6 +130,11 @@
   font-size: 1.25rem;
 }
 
+/*Show navbar movil*/
+.showNav {
+  left: 0;
+}
+
 .body-pd {
   padding-left: calc(var(--nav-width));
 }
@@ -148,7 +153,7 @@
   }
   .header {
     height: calc(var(--header-height) + 1rem);
-    padding: 0 4rem 0 2rem;
+    padding: 0 8rem 0 2rem;
     margin-left: 15em;
   }
   .header__img {
@@ -163,23 +168,27 @@
     padding: 1rem 1rem 0 0;
   }
   /*Show navbar desktop*/
+  .showNav {
+    width: calc(var(--nav-width) + 156px);
+  }
   /*Add padding body desktop*/
   .body-pd {
     padding-left: calc(var(--nav-width) + 188px);
   }
 }
 .dashboard {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  justify-content: space-between;
 }
 .dashboard .visualData {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 365px);
-  grid-column: 1/4;
+  column-gap: 2em;
   row-gap: 1em;
   margin-top: var(--header-height);
   padding-left: 2em;
+  width: 60%;
 }
 .dashboard .visualData #my_dataviz,
 .dashboard .visualData #my_dataviz2,
@@ -236,10 +245,112 @@
 }
 .dashboard .dashboard__Form {
   background-color: #fff;
-  grid-column: 4/6;
+  width: 40%;
   height: 100vh;
   overflow: hidden;
   padding: 5em 1em 5em 3em;
+}
+
+@media screen and (max-width: 1700px) {
+  .dashboard {
+    gap: 1em;
+  }
+  .dashboard .visualData {
+    width: 60%;
+  }
+  .dashboard .visualData #my_dataviz,
+.dashboard .visualData #my_dataviz2,
+.dashboard .visualData #my_dataviz3 {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    overflow: hidden;
+    width: 350px;
+    height: 350px;
+    padding: 1em;
+  }
+  .dashboard .visualData #my_dataviz .svgContent,
+.dashboard .visualData #my_dataviz2 .svgContent,
+.dashboard .visualData #my_dataviz3 .svgContent {
+    display: inline-block;
+    position: absolute;
+    width: 400px;
+    height: 350px;
+  }
+  .dashboard .visualData #my_dataviz .svgContent__first,
+.dashboard .visualData #my_dataviz2 .svgContent__first,
+.dashboard .visualData #my_dataviz3 .svgContent__first {
+    transform: translateX(-20px);
+  }
+  .dashboard .visualData #my_dataviz .svgContent__third,
+.dashboard .visualData #my_dataviz2 .svgContent__third,
+.dashboard .visualData #my_dataviz3 .svgContent__third {
+    transform: translateX(-45px);
+  }
+  .dashboard .visualData .totalDatas {
+    width: 350px;
+    height: 350px;
+  }
+}
+.ticket {
+  margin-top: 1rem;
+  padding: 2em;
+}
+.ticket__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fcfcfc;
+  padding: 1em;
+  border-radius: 10px 10px 0 0;
+}
+.ticket__header--title {
+  font-weight: 500;
+  font-size: 18px;
+}
+.ticket__table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0;
+}
+.ticket__table th,
+.ticket__table td {
+  text-align: left;
+  padding: 0.75em 1em;
+}
+.ticket__table thead {
+  background-color: #e6ebf0;
+}
+.ticket__table td:last-child i {
+  padding: 5px;
+}
+.ticket__table tr:nth-child(even) {
+  background-color: #f2f4f6;
+}
+.ticket #pageNav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #fcfcfc;
+  border-radius: 0 0 10px 10px;
+  border-bottom: 0.5px solid rgba(175, 175, 175, 0.5882352941);
+}
+.ticket #pageNav a {
+  padding: 7px 15px;
+  margin: 0.5em;
+  color: #1E1E1E;
+}
+.ticket #pageNav .activePage {
+  background-color: #1266f1;
+  padding: 7px 15px;
+  border-radius: 25px;
+  color: #fff;
+}
+
+.offcanvas {
+  width: 35%;
+}
+.offcanvas-header {
+  padding: 1em;
 }
 
 .form {
@@ -257,16 +368,6 @@
   display: flex;
   justify-content: flex-end;
   padding-right: 1em;
-}
-.form .buttonTop .btn__export {
-  padding: 7px 15px;
-  gap: 10px;
-  background-color: #000000;
-  border-radius: 8px;
-}
-.form .buttonTop .btn__export button {
-  color: #ffffff;
-  font-weight: 500;
 }
 .form-section {
   display: grid;
@@ -286,36 +387,11 @@
   justify-content: space-between;
   margin-top: 1.5em;
 }
-.form .buttonsBottom .btn__view {
-  padding: 7px 15px;
-  gap: 10px;
-  border: 1px solid #003893;
-  border-radius: 8px;
-}
-.form .buttonsBottom .btn__view button {
-  color: #003893;
-  font-weight: 500;
-}
 .form .buttonsBottom__right {
   display: flex;
   flex-direction: row;
   gap: 1.75em;
   align-items: center;
-}
-.form .buttonsBottom__right .btn__clear button {
-  color: #d70000;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-.form .buttonsBottom__right .btn__search {
-  padding: 7px 15px;
-  gap: 10px;
-  background-color: #1266f1;
-  border-radius: 8px;
-}
-.form .buttonsBottom__right .btn__search button {
-  color: #ffffff;
-  font-weight: 500;
 }
 .form-label {
   position: absolute;
@@ -368,6 +444,47 @@
   top: -0.65rem;
   left: 0.75rem;
   z-index: 5;
+}
+
+@media screen and (max-width: 1700px) {
+  body {
+    font-size: 14px;
+  }
+}
+.btn__export {
+  padding: 7px 15px;
+  gap: 10px;
+  background-color: #000000;
+  border-radius: 8px;
+}
+.btn__export button {
+  color: #ffffff;
+  font-weight: 500;
+}
+.btn__view {
+  padding: 7px 15px;
+  gap: 10px;
+  border: 1px solid #003893;
+  border-radius: 8px;
+}
+.btn__view button {
+  color: #003893;
+  font-weight: 500;
+}
+.btn__search {
+  padding: 7px 15px;
+  gap: 10px;
+  background-color: #1266f1;
+  border-radius: 8px;
+}
+.btn__search button {
+  color: #ffffff;
+  font-weight: 500;
+}
+.btn__clear button {
+  color: #d70000;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .custom-select {
@@ -438,77 +555,6 @@
 /*hide the items when the select box is closed:*/
 .select-hide {
   display: none;
-}
-
-.ticket {
-  margin-top: 1rem;
-  padding: 2em;
-}
-.ticket__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fcfcfc;
-  padding: 1em;
-  border-radius: 10px 10px 0 0;
-}
-.ticket__header--title {
-  font-weight: 500;
-  font-size: 18px;
-}
-.ticket__header--button .btn__search {
-  padding: 7px 15px;
-  gap: 10px;
-  background-color: #1266f1;
-  border-radius: 8px;
-}
-.ticket__header--button .btn__search button {
-  color: #ffffff;
-  font-weight: 500;
-}
-.ticket__table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 0;
-}
-.ticket__table th,
-.ticket__table td {
-  text-align: left;
-  padding: 0.75em 1em;
-}
-.ticket__table thead {
-  background-color: #e6ebf0;
-}
-.ticket__table td:last-child i {
-  padding: 5px;
-}
-.ticket__table tr:nth-child(even) {
-  background-color: #f2f4f6;
-}
-.ticket #pageNav {
-  display: flex;
-  justify-content: flex-end;
-  background-color: #fcfcfc;
-  border-radius: 0 0 10px 10px;
-  border-bottom: 0.5px solid rgba(175, 175, 175, 0.5882352941);
-}
-.ticket #pageNav a {
-  padding: 7px 15px;
-  margin: 0.5em;
-  color: #1E1E1E;
-}
-.ticket #pageNav .activePage {
-  background-color: #1266f1;
-  padding: 7px 15px;
-  border-radius: 25px;
-  color: #fff;
-}
-
-.offcanvas {
-  width: 35%;
-}
-.offcanvas-header {
-  padding: 1em;
 }
 
 :root {

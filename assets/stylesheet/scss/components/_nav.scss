@@ -17,7 +17,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 0 4rem 0 2rem;
   background-color: var(--white-color);
   z-index: var(--z-fixed);
   transition: 0.5s;
@@ -146,7 +146,10 @@ body {
   }
 }
 
-
+/*Show navbar movil*/
+.showNav{
+  left: 0;
+}
 .body-pd {
   padding-left: calc(var(--nav-width));
 }
@@ -163,7 +166,7 @@ body {
   }
   .header {
     height: calc(var(--header-height) + 1rem);
-    padding: 0 4rem 0 2rem;
+    padding: 0 8rem 0 2rem;
     margin-left: 15em;
     &__img {
       width: 40px;
@@ -180,10 +183,10 @@ body {
     padding: 1rem 1rem 0 0;
   }
 
-  /*Show navbar desktop*/
-  // .show {
-  //   width: calc(var(--nav-width) + 156px);
-  // }
+ /*Show navbar desktop*/
+ .showNav{
+  width: calc(var(--nav-width) + 156px);
+}
 
   /*Add padding body desktop*/
   .body-pd {
