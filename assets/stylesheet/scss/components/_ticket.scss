@@ -37,6 +37,9 @@
     tr:nth-child(even) {
       background-color: #f2f4f6;
     }
+    tr:nth-child(odd) {
+      background-color: #ffffff;
+    }
   }
   #pageNav {
     display: flex;
