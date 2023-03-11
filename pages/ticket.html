@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EkGhanti Task</title>
+    <!-- custom css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../assets/stylesheet/css/main.css" />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/78dd5d4ce5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="header__left">Ticket</div>
+      <div class="header__right" id="header__right">
+        <div class="notificationBell"><i class="fa-regular fa-bell nav__icon"></i></div>
+        <div class="userData">
+          <div class="header__img">
+            <img src="#" alt="">
+          </div>
+         <div class="userDetail">
+            <span class="userName"> Admin</span>
+            <span class="userRole">User type: Manager</span>
+         </div>
+        </div>
+    </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+      <nav class="nav">
+        <div>
+          <a href="#" class="nav__logo">
+            <img class="nav__logo-name" src="../assets/images/logo.png" />
+          </a>
+
+          <div class="nav__list" id="navList">
+            <a href="../dashboard.html" class="nav__link">
+              <i class="fa-solid fa-chart-line nav__icon"></i>
+              <span class="nav__name">Dashboard</span>
+            </a>
+
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-user nav__icon"></i>
+              <span class="nav__name">User</span>
+            </a>
+
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-users nav__icon"></i>
+              <span class="nav__name">Groups</span>
+            </a>
+
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-sheet-plastic nav__icon"></i>
+              <span class="nav__name">Projects</span>
+            </a>
+
+            <a href="#" class="nav__link">
+              <i class="fa-regular fa-hourglass nav__icon"></i>
+              <span class="nav__name">Ticket Status</span>
+            </a>
+
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-user-tag nav__icon"></i>
+              <span class="nav__name">Role</span>
+            </a>
+            <a href="#" class="nav__link active">
+              <i class="fa-solid fa-ticket-simple nav__icon"></i>
+              <span class="nav__name">Ticket</span>
+            </a>
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-envelope nav__icon"></i>
+              <span class="nav__name">SMS/Email</span>
+            </a>
+          </div>
+        </div>
+        <a href="#" class="btn__logout">
+          <i class="fa-solid fa-arrow-right-from-bracket nav__icon"></i>
+          <span class="nav__name">Log Out</span>
+        </a>
+      </nav>
+    </div>
+
+    <div id="ticket" class="ticket">
+      <div class="ticket__header">
+        <div class="ticket__header--title">
+          <p>Ticket</p>
+        </div>
+        <div class="ticket__header--button">
+          <div class="btn__search">
+            <button
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"
+            >
+            <i class="fa-solid fa-plus"></i> Add New Ticket
+            </button>
+          </div>
+        </div>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasRight"
+          aria-labelledby="offcanvasRightLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Add New Ticket</h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <form
+              name="register"
+              class="form"
+              onsubmit="event.preventDefault(); return validateForm(this);"
+            >
+              <div class="form-section">
+                <div class="form-control">
+                  <input
+                    type="text"
+                    name="assignedBy"
+                    placeholder="assignedBy"
+                    id="assignedBy"
+                    class="form-input"
+                    autocomplete="off"
+                  />
+                  <label for="assignedBy" class="form-label">Assigned By</label>
+                </div>
+                <div class="form-control">
+                  <input
+                    type="text"
+                    name="group"
+                    placeholder="group"
+                    id="group"
+                    class="form-input"
+                    autocomplete="off"
+                  />
+                  <label for="group" class="form-label">Group</label>
+                </div>
+                <div class="form-control">
+                  <input
+                    type="text"
+                    name="assignedTo"
+                    placeholder="assignedTo"
+                    id="assignedTo"
+                    class="form-input"
+                    autocomplete="off"
+                  />
+                  <label for="assignedTo" class="form-label">Assigned To</label>
+                </div>
+              </div>
+              <div class="form-section">
+                <div class="form-control">
+                  <input
+                    type="text"
+                    name="project"
+                    placeholder="project"
+                    id="project"
+                    class="form-input"
+                    autocomplete="off"
+                  />
+                  <label for="project" class="form-label">Project</label>
+                </div>
+                <div class="form-control">
+                  <input
+                    type="text"
+                    name="vertical"
+                    placeholder="vertical"
+                    id="vertical"
+                    class="form-input"
+                    autocomplete="off"
+                  />
+                  <label for="vertical" class="form-label">Vertical</label>
+                </div>
+                <div class="form-control">
+                  <input
+                    type="text"
+                    name="subVertical"
+                    placeholder="subVertical"
+                    id="subVertical"
+                    class="form-input"
+                    autocomplete="off"
+                  />
+                  <label for="subVertical" class="form-label"
+                    >Sub vertical</label
+                  >
+                </div>
+              </div>
+              <div class="form-section">
+                <div class="form-control">
+                  <input
+                    type="date"
+                    name="from"
+                    placeholder="from"
+                    id="from"
+                    class="form-input"
+                    autocomplete="off"
+                  />
+                  <label for="from" class="form-label">From</label>
+                </div>
+                <div class="form-control">
+                  <input
+                    type="date"
+                    name="to"
+                    placeholder="to"
+                    id="to"
+                    class="form-input"
+                    autocomplete="off"
+                  />
+                  <label for="to" class="form-label">To</label>
+                </div>
+                <div class="form-control">
+                  <input
+                    type="text"
+                    name="status"
+                    placeholder="status"
+                    id="status"
+                    class="form-input"
+                    autocomplete="off"
+                  />
+                  <label for="status" class="form-label">Ticket Status</label>
+                </div>
+                <div class="form-control">
+                  <input
+                    type="text"
+                    name="customerNUmber"
+                    placeholder="customerNUmber"
+                    id="customerNUmber"
+                    class="form-input"
+                    autocomplete="off"
+                  />
+                  <label for="customerNUmber" class="form-label"
+                    >Customer Number</label
+                  >
+                </div>
+              </div>
+              <div class="buttonsBottom">
+                <div class="btn__export">
+                  <button type="submit">
+                    <i class="uil uil-export"></i> Export
+                  </button>
+                </div>
+                <div class="buttonsBottom__right">
+                  <div class="btn__clear">
+                    <button type="submit">Clear</button>
+                  </div>
+                  <div class="btn__search">
+                    <button type="submit">
+                      <i class="fa-solid fa-plus"></i> Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table ticket__table" id="ticketTable">
+          <thead>
+            <tr>
+              <th>Ticket ID</th>
+              <th>Agent/Customer</th>
+              <th>Wallet ID</th>
+              <th>Created</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Route</th>
+              <th>Source</th>
+              <th>Created By</th>
+              <th>Projects</th>
+              <th>Vertical</th>
+              <th>Sub-Vertical</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2670</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2671</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2672</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2673</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2674</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2675</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2676</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn-show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2677</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__shows">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2678</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2679</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2672</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2672</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2672</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2672</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2672</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2672</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2672</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../assets/js/pagination.js"></script>
+</html>

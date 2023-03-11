@@ -1,0 +1,61 @@
+.btn {
+  &__export {
+    padding: 7px 15px;
+    gap: 10px;
+    background-color: #000000;
+    border-radius: 8px;
+    button {
+      color: #ffffff;
+      font-weight: 500;
+    }
+  }
+  &__view {
+    padding: 7px 15px;
+    gap: 10px;
+    border: 1px solid #003893;
+    border-radius: 8px;
+    color: #003893;
+    font-weight: 500;
+  }
+  &__search {
+    padding: 7px 15px;
+    gap: 10px;
+    background-color: #1266f1;
+    border-radius: 8px;
+    button {
+      color: #ffffff;
+      font-weight: 500;
+    }
+  }
+  &__clear {
+    button {
+      color: #d70000;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+  }
+  &__logout{
+    color: #464646;
+    padding: 0.5rem 2.25em ;
+    margin-bottom: 0.75rem;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    i{
+      padding-right: 5px;
+    }
+    &:hover{
+      color: red;
+    }
+  }
+  &__show{
+    color: #800080;
+  }
+  &__edit{
+    color: #4F4F4F
+  }
+  &__delete{
+    color: #E50000;
+  }
+}
