@@ -524,10 +524,12 @@
   background-color: #fcfcfc;
   padding: 1em;
   border-radius: 10px 10px 0 0;
+  border: 1px solid #f1f1f1;
 }
 .ticket__header--title {
   font-weight: 500;
   font-size: 18px;
+  margin: 0;
 }
 .ticket__table {
   border-collapse: collapse;
@@ -537,7 +539,7 @@
 .ticket__table th,
 .ticket__table td {
   text-align: left;
-  padding: 0.75em 1em;
+  padding: 0.95em 1em;
 }
 .ticket__table thead {
   background-color: #e6ebf0;
@@ -571,7 +573,7 @@
   width: 35%;
 }
 .offcanvas-header {
-  padding: 1em;
+  padding: 1em 2em;
 }
 
 .form {
@@ -699,6 +701,21 @@
   color: #d70000;
   font-weight: 500;
   letter-spacing: 1px;
+}
+.btn__logout {
+  color: #464646;
+  padding: 0.5rem 0 0.5rem 2rem;
+  margin-bottom: 0.75rem;
+  transition: 0.3s;
+}
+.btn__show {
+  color: #800080;
+}
+.btn__edit {
+  color: #4F4F4F;
+}
+.btn__delete {
+  color: #E50000;
 }
 
 .custom-select {

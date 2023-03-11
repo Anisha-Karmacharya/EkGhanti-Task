@@ -34,4 +34,19 @@
       letter-spacing: 1px;
     }
   }
+  &__logout{
+    color: #464646;
+    padding: 0.5rem 0 0.5rem 2rem;
+    margin-bottom: 0.75rem;
+    transition: 0.3s;
+  }
+  &__show{
+    color: #800080;
+  }
+  &__edit{
+    color: #4F4F4F
+  }
+  &__delete{
+    color: #E50000;
+  }
 }
