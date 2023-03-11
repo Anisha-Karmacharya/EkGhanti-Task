@@ -104,9 +104,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
- &__list{
-  padding-left: 1em;
- }
+  &__list {
+    padding-left: 1em;
+  }
   &__logo,
   &__link {
     display: grid;
@@ -142,22 +142,23 @@ body {
 }
 
 /*Show navbar movil*/
-.showNav{
+.showNav {
   left: 0;
 }
 .body-pd {
   padding-left: calc(var(--nav-width));
 }
-.active{
-  color: #FFFFFF;
-  background-color: #1266F1;
+.active,
+.nav__link:hover {
+  color: #ffffff;
+  background-color: #1266f1;
   border-radius: 10px;
 }
 /* ===== MEDIA QUERIES=====*/
 @media screen and (min-width: 768px) {
   body {
     margin: calc(var(--header-height) + 1rem) 0 0 0;
-    padding-left: calc(var(--nav-width) );
+    padding-left: calc(var(--nav-width));
   }
   .header {
     height: calc(var(--header-height) + 1rem);
@@ -178,10 +179,10 @@ body {
     padding: 1rem 1rem 0 0;
   }
 
- /*Show navbar desktop*/
- .showNav{
-  width: calc(var(--nav-width) + 156px);
-}
+  /*Show navbar desktop*/
+  .showNav {
+    width: calc(var(--nav-width) + 156px);
+  }
 
   /*Add padding body desktop*/
   .body-pd {
@@ -203,4 +204,8 @@ body {
     }
   }
 }
-
+@media screen and (max-width: 1290px) {
+  .header {
+    margin-left: 20em;
+  }
+}

@@ -103,7 +103,6 @@ svg
   .attr("text-anchor", "left")
   .style("alignment-baseline", "middle");
 
-
 // ---------------------Second Chart----------------------
 // set the dimensions and margins of the graph
 var width = 450;
@@ -227,7 +226,7 @@ var svg3 = d3
 // Create dummy data
 var data = {
   "In Progress": 20,
-  "Closed": 50,
+  Closed: 50,
   "Raised and Closed": 100,
   "Closed Call Not Connected": 40,
 };
@@ -313,4 +312,3 @@ svg3
   })
   .attr("text-anchor", "left")
   .style("alignment-baseline", "middle");
-

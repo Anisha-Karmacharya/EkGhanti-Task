@@ -5,14 +5,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 365px);
-    column-gap:2em;
+    column-gap: 2em;
     row-gap: 1em;
     margin-top: var(--header-height);
     padding-left: 2em;
     width: 60%;
     #my_dataviz,
     #my_dataviz2,
-    #my_dataviz3{
+    #my_dataviz3 {
       background-color: #fff;
       border: 1px solid #e9e9e9;
       border-radius: 10px;
@@ -40,7 +40,7 @@
         p {
           font-size: 18px;
           font-weight: 500;
-          color: #024B8D;
+          color: #024b8d;
         }
       }
       .totalData {
@@ -48,15 +48,14 @@
         font-weight: 400;
         font-size: 16px;
         border-bottom: 1px solid #e9e9e9;
-        &:nth-child(even){
-          background: #F8F8F8;
-
+        &:nth-child(even) {
+          background: #f8f8f8;
         }
         span {
           font-size: 14px;
           font-weight: 700;
           float: right;
-          color: #024B8D;
+          color: #024b8d;
         }
       }
     }
@@ -67,22 +66,25 @@
     height: 100vh;
     overflow: hidden;
     padding: 5em 1em 5em 3em;
-
   }
 }
 @media screen and (max-width: 1300px) {
-  body, .form-label, .form-input, .select-selected, .header__right{
+  body,
+  .form-label,
+  .form-input,
+  .select-selected,
+  .header__right {
     font-size: 12px !important;
-}
- .header__right .userDetail .userName{
-  font-size: 14px !important;
-}
-.header__left{
-  font-size: 18px !important;
-}
-.header__right .userDetail .userRole {
+  }
+  .header__right .userDetail .userName {
+    font-size: 14px !important;
+  }
+  .header__left {
+    font-size: 18px !important;
+  }
+  .header__right .userDetail .userRole {
     font-size: 12px;
-}
+  }
   .dashboard {
     display: flex;
     justify-content: space-between;
@@ -91,22 +93,22 @@
       flex-direction: column;
       #my_dataviz,
       #my_dataviz2,
-      #my_dataviz3{
+      #my_dataviz3 {
         background-color: #fff;
         border: 1px solid #e9e9e9;
         border-radius: 10px;
         width: 450px;
         height: 300px;
         padding: 1em;
-        .svgContent{
+        .svgContent {
           display: inline-block;
           position: absolute;
           width: 450px;
           height: 300px;
-          &__first{
+          &__first {
             transform: translateX(-20px);
           }
-          &__third{
+          &__third {
             transform: translateX(-45px);
           }
         }
@@ -123,7 +125,7 @@
           p {
             font-size: 18px;
             font-weight: 500;
-            color: #024B8D;
+            color: #024b8d;
           }
         }
         .totalData {
@@ -131,15 +133,14 @@
           font-weight: 400;
           font-size: 16px;
           border-bottom: 1px solid #e9e9e9;
-          &:nth-child(even){
-            background: #F8F8F8;
-  
+          &:nth-child(even) {
+            background: #f8f8f8;
           }
           span {
             font-size: 14px;
             font-weight: 700;
             float: right;
-            color: #024B8D;
+            color: #024b8d;
           }
         }
       }
@@ -150,90 +151,99 @@
       height: 100vh;
       overflow: hidden;
       padding: 5em 1em 5em 3em;
-  
     }
   }
 }
 @media screen and (min-width: 1350px) {
-  body, .form-label, .form-input, .select-selected, .header__right{
+  body,
+  .form-label,
+  .form-input,
+  .select-selected,
+  .header__right {
     font-size: 14px !important;
-}
- .header__right .userDetail .userName{
-  font-size: 14px !important;
-}
-.header__left{
-  font-size: 20px !important;
-}
-.header__right .userDetail .userRole {
+  }
+  .header__right .userDetail .userName {
+    font-size: 14px !important;
+  }
+  .header__left {
+    font-size: 20px !important;
+  }
+  .header__right .userDetail .userRole {
     font-size: 12px;
-}
-.dashboard {
-  display: flex;
-  justify-content: space-between;
-  .visualData {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 365px);
-    width: 60%;
-    #my_dataviz,
-    #my_dataviz2,
-    #my_dataviz3{
-      width: 325px;
-      height: 350px;
-      .svgContent{
-        width: 375px;
+  }
+  .header {
+    // height: calc(var(--header-height) + 1rem);
+    padding: 0 4rem 0 4rem;
+  }
+  .dashboard {
+    display: flex;
+    justify-content: space-between;
+    .visualData {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 365px);
+      width: 60%;
+      #my_dataviz,
+      #my_dataviz2,
+      #my_dataviz3 {
+        width: 325px;
         height: 350px;
-        &__first{
-          transform: translateX(-20px);
-        }
-        &__third{
-          transform: translateX(-45px);
+        .svgContent {
+          width: 375px;
+          height: 350px;
+          &__first {
+            transform: translateX(-20px);
+          }
+          &__third {
+            transform: translateX(-45px);
+          }
         }
       }
+      .totalDatas {
+        width: 325px;
+        height: 350px;
+        padding: 1em;
+      }
     }
-    .totalDatas {
-      width: 325px;
-      height: 350px;
-      padding: 1em;
+    .dashboard__Form {
+      width: 35%;
     }
   }
-  .dashboard__Form {
-    width: 35%;
-
-  }
-}
 }
 @media screen and (min-width: 1500px) {
-  body{
+  .header {
+    // height: calc(var(--header-height) + 1rem);
+    padding: 0 4rem 0 4rem;
+  }
+  body {
     font-size: 14px;
-}
+  }
   .dashboard {
     gap: 1em;
     .visualData {
       width: 60%;
       #my_dataviz,
       #my_dataviz2,
-      #my_dataviz3{
+      #my_dataviz3 {
         display: inline-block;
         position: relative;
-        vertical-align: middle; 
+        vertical-align: middle;
         overflow: hidden;
         width: 400px;
         height: 350px;
-        .svgContent{
+        .svgContent {
           display: inline-block;
           position: absolute;
-          
+
           width: 450px;
           height: 350px;
-          &__first{
+          &__first {
             transform: translateX(-20px);
           }
-          &__third{
+          &__third {
             transform: translateX(-45px);
           }
         }
-
       }
       .totalDatas {
         width: 400px;
@@ -243,36 +253,39 @@
   }
 }
 @media screen and (min-width: 1750px) {
-  body{
+  body {
     font-size: 14px;
-}
+  }
+  .header {
+    // height: calc(var(--header-height) + 1rem);
+    padding: 0 4rem 0 4rem;
+  }
   .dashboard {
     gap: 1em;
     .visualData {
       width: 60%;
       #my_dataviz,
       #my_dataviz2,
-      #my_dataviz3{
+      #my_dataviz3 {
         display: inline-block;
         position: relative;
-        vertical-align: middle; 
+        vertical-align: middle;
         overflow: hidden;
         width: 500px;
         height: 350px;
-        .svgContent{
+        .svgContent {
           display: inline-block;
           position: absolute;
-          
+
           width: 550px;
           height: 350px;
-          &__first{
+          &__first {
             transform: translateX(-20px);
           }
-          &__third{
+          &__third {
             transform: translateX(-45px);
           }
         }
-
       }
       .totalDatas {
         width: 500px;
@@ -281,4 +294,3 @@
     }
   }
 }
-
