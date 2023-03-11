@@ -36,9 +36,18 @@
   }
   &__logout{
     color: #464646;
-    padding: 0.5rem 0 0.5rem 2rem;
+    padding: 0.5rem 2.25em ;
     margin-bottom: 0.75rem;
     transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    i{
+      padding-right: 5px;
+    }
+    &:hover{
+      color: red;
+    }
   }
   &__show{
     color: #800080;

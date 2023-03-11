@@ -103,7 +103,7 @@
   grid-template-columns: max-content max-content;
   align-items: center;
   column-gap: 1rem;
-  padding: 0.5rem 0 0.5rem 1.5rem;
+  padding: 0.75rem 0 0.75rem 1.5rem;
 }
 .nav__logo {
   margin-bottom: 2rem;
@@ -265,7 +265,7 @@
   width: 40%;
   height: 100vh;
   overflow: hidden;
-  padding: 5em 1em 5em 3em;
+  padding: 2em 1em 5em 3em;
 }
 
 @media screen and (max-width: 1300px) {
@@ -529,6 +529,8 @@
 .ticket__header--title {
   font-weight: 500;
   font-size: 18px;
+}
+.ticket__header--title p {
   margin: 0;
 }
 .ticket__table {
@@ -539,7 +541,7 @@
 .ticket__table th,
 .ticket__table td {
   text-align: left;
-  padding: 0.95em 1em;
+  padding: 1em;
 }
 .ticket__table thead {
   background-color: #e6ebf0;
@@ -573,7 +575,14 @@
   width: 35%;
 }
 .offcanvas-header {
-  padding: 1em 2em;
+  padding: 3em 3em 0 2em;
+}
+.offcanvas-header h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.offcanvas-body {
+  padding: 0 2em;
 }
 
 .form {
@@ -589,8 +598,12 @@
 }
 .form .buttonTop {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding-right: 1em;
+}
+.form .buttonTop h1 {
+  font-weight: 600;
+  font-size: 18px;
 }
 .form-section {
   display: grid;
@@ -704,9 +717,18 @@
 }
 .btn__logout {
   color: #464646;
-  padding: 0.5rem 0 0.5rem 2rem;
+  padding: 0.5rem 2.25em;
   margin-bottom: 0.75rem;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.btn__logout i {
+  padding-right: 5px;
+}
+.btn__logout:hover {
+  color: red;
 }
 .btn__show {
   color: #800080;

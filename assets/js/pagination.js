@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $("#ticketTable").after('<div id="pageNav"></div>');
-  var visibleRows = 5;
+  var visibleRows = 10;
   var totalRows = $("#ticketTable tbody tr").length;
   var numPages = totalRows / visibleRows;
   for (i = 0; i < numPages; i++) {

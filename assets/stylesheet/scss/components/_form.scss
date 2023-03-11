@@ -10,8 +10,12 @@
   padding-right: 1em;
   .buttonTop {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding-right: 1em;
+    h1{
+      font-weight: 600;
+      font-size: 18px;
+    }
   }
 
   &-section {

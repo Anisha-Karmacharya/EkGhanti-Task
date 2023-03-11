@@ -21,14 +21,25 @@
   <body>
     <header class="header" id="header">
       <div class="header__left"> Dashboard </div>
-      <div class="header__right" id="header__right"></div>
+      <div class="header__right" id="header__right">
+        <div class="notificationBell"><i class="fa-regular fa-bell nav__icon"></i></div>
+        <div class="userData">
+          <div class="header__img">
+            <img src="#" alt="">
+          </div>
+         <div class="userDetail">
+            <span class="userName"> Admin</span>
+            <span class="userRole">User type: Manager</span>
+         </div>
+        </div>
+    </div>
     </header>
     <div class="l-navbar" id="nav-bar">
 
       <nav class="nav">
         <div>
           <a href="#" class="nav__logo">
-            <img class="nav__logo-name" src="../assets/images/logo.png" />
+            <img class="nav__logo-name" src="./assets/images/logo.png" />
           </a>
     
           <div class="nav__list" id="navList">
@@ -71,7 +82,7 @@
             </a>
           </div>
         </div>
-        <a href="#" class="nav__link">
+        <a href="#" class="btn__logout">
           <i class="fa-solid fa-arrow-right-from-bracket nav__icon"></i>
           <span class="nav__name">Log Out</span>
       </a>
@@ -94,6 +105,7 @@
 
         <div class="totalDatas">
           <div class="dataTitle"><p>Total</p></div>
+          <div>
           <div class="totalData">IME Report: <span>50</span></div>
           <div class="totalData">Ticket Status: <span>50</span></div>
           <div class="totalData">Vertical Report: <span>50</span></div>
@@ -107,6 +119,7 @@
             onsubmit="event.preventDefault(); return validateForm(this);"
           >
             <div class="buttonTop">
+              <h1>Ticket</h1>
               <div class="btn__export">
                 <button type="submit">
                   <i class="uil uil-export"></i> Export
@@ -239,8 +252,6 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   ></script>
-
-  <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/chart.js"></script>
-  <script src="/assets/js/customSelect.js"></script>
+  <script src="./assets/js/chart.js"></script>
+  <script src="./assets/js/customSelect.js"></script>
 </html>
