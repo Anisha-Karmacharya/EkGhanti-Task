@@ -14,7 +14,10 @@
     />
     <link rel="stylesheet" href="../assets/stylesheet/css/main.css" />
     <!-- icons -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
     <script
       src="https://kit.fontawesome.com/78dd5d4ce5.js"
       crossorigin="anonymous"
@@ -23,9 +26,72 @@
   <body>
     <header class="header" id="header">
       <div class="header__left">Ticket</div>
-      <div class="header__right" id="header__right"></div>
+      <div class="header__right" id="header__right">
+        <div class="notificationBell"><i class="fa-regular fa-bell nav__icon"></i></div>
+        <div class="userData">
+          <div class="header__img">
+            <img src="#" alt="">
+          </div>
+         <div class="userDetail">
+            <span class="userName"> Admin</span>
+            <span class="userRole">User type: Manager</span>
+         </div>
+        </div>
+    </div>
     </header>
-    <div id="navigation"></div>
+    <div class="l-navbar" id="nav-bar">
+      <nav class="nav">
+        <div>
+          <a href="#" class="nav__logo">
+            <img class="nav__logo-name" src="../assets/images/logo.png" />
+          </a>
+
+          <div class="nav__list" id="navList">
+            <a href="../dashboard.html" class="nav__link">
+              <i class="fa-solid fa-chart-line nav__icon"></i>
+              <span class="nav__name">Dashboard</span>
+            </a>
+
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-user nav__icon"></i>
+              <span class="nav__name">User</span>
+            </a>
+
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-users nav__icon"></i>
+              <span class="nav__name">Groups</span>
+            </a>
+
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-sheet-plastic nav__icon"></i>
+              <span class="nav__name">Projects</span>
+            </a>
+
+            <a href="#" class="nav__link">
+              <i class="fa-regular fa-hourglass nav__icon"></i>
+              <span class="nav__name">Ticket Status</span>
+            </a>
+
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-user-tag nav__icon"></i>
+              <span class="nav__name">Role</span>
+            </a>
+            <a href="#" class="nav__link active">
+              <i class="fa-solid fa-ticket-simple nav__icon"></i>
+              <span class="nav__name">Ticket</span>
+            </a>
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-envelope nav__icon"></i>
+              <span class="nav__name">SMS/Email</span>
+            </a>
+          </div>
+        </div>
+        <a href="#" class="btn__logout">
+          <i class="fa-solid fa-arrow-right-from-bracket nav__icon"></i>
+          <span class="nav__name">Log Out</span>
+        </a>
+      </nav>
+    </div>
 
     <div id="ticket" class="ticket">
       <div class="ticket__header">
@@ -40,7 +106,7 @@
               data-bs-target="#offcanvasRight"
               aria-controls="offcanvasRight"
             >
-              <i class="fa-solid fa-magnifying-glass"></i> Add New Ticket
+            <i class="fa-solid fa-plus"></i> Add New Ticket
             </button>
           </div>
         </div>
@@ -50,10 +116,15 @@
           id="offcanvasRight"
           aria-labelledby="offcanvasRightLabel"
         >
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasLabel">Add New Ticket</h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Add New Ticket</h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
           <div class="offcanvas-body">
             <form
               name="register"
@@ -166,8 +237,20 @@
                   />
                   <label for="status" class="form-label">Ticket Status</label>
                 </div>
+                <div class="form-control">
+                  <input
+                    type="text"
+                    name="customerNUmber"
+                    placeholder="customerNUmber"
+                    id="customerNUmber"
+                    class="form-input"
+                    autocomplete="off"
+                  />
+                  <label for="customerNUmber" class="form-label"
+                    >Customer Number</label
+                  >
+                </div>
               </div>
-
               <div class="buttonsBottom">
                 <div class="btn__export">
                   <button type="submit">
@@ -221,7 +304,7 @@
               <td>Drop call</td>
               <td>Raised and closed</td>
               <td>
-                <button class="btn__view">
+                <button class="btn__show">
                   <i class="fa-regular fa-eye"></i>
                 </button>
                 <button class="btn__edit">
@@ -248,7 +331,7 @@
               <td>Drop call</td>
               <td>Raised and closed</td>
               <td>
-                <button class="btn__view">
+                <button class="btn__show">
                   <i class="fa-regular fa-eye"></i>
                 </button>
                 <button class="btn__edit">
@@ -275,7 +358,7 @@
               <td>Drop call</td>
               <td>Raised and closed</td>
               <td>
-                <button class="btn__view">
+                <button class="btn__show">
                   <i class="fa-regular fa-eye"></i>
                 </button>
                 <button class="btn__edit">
@@ -302,7 +385,7 @@
               <td>Drop call</td>
               <td>Raised and closed</td>
               <td>
-                <button class="btn__view">
+                <button class="btn__show">
                   <i class="fa-regular fa-eye"></i>
                 </button>
                 <button class="btn__edit">
@@ -329,7 +412,7 @@
               <td>Drop call</td>
               <td>Raised and closed</td>
               <td>
-                <button class="btn__view">
+                <button class="btn__show">
                   <i class="fa-regular fa-eye"></i>
                 </button>
                 <button class="btn__edit">
@@ -356,7 +439,7 @@
               <td>Drop call</td>
               <td>Raised and closed</td>
               <td>
-                <button class="btn__view">
+                <button class="btn__show">
                   <i class="fa-regular fa-eye"></i>
                 </button>
                 <button class="btn__edit">
@@ -383,7 +466,7 @@
               <td>Drop call</td>
               <td>Raised and closed</td>
               <td>
-                <button class="btn__view">
+                <button class="btn-show">
                   <i class="fa-regular fa-eye"></i>
                 </button>
                 <button class="btn__edit">
@@ -410,7 +493,7 @@
               <td>Drop call</td>
               <td>Raised and closed</td>
               <td>
-                <button class="btn__view">
+                <button class="btn__shows">
                   <i class="fa-regular fa-eye"></i>
                 </button>
                 <button class="btn__edit">
@@ -437,7 +520,7 @@
               <td>Drop call</td>
               <td>Raised and closed</td>
               <td>
-                <button class="btn__view">
+                <button class="btn__show">
                   <i class="fa-regular fa-eye"></i>
                 </button>
                 <button class="btn__edit">
@@ -464,7 +547,196 @@
               <td>Drop call</td>
               <td>Raised and closed</td>
               <td>
-                <button class="btn__view">
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2672</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2672</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2672</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2672</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2672</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2672</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+                <button class="btn__edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn__delete">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="btn__share">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2672</td>
+              <td>63639696+</td>
+              <td>9956464</td>
+              <td>January 20. 2:00 am</td>
+              <td>January 20</td>
+              <td>2:00am</td>
+              <td>Manual</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Drop call</td>
+              <td>Raised and closed</td>
+              <td>
+                <button class="btn__show">
                   <i class="fa-regular fa-eye"></i>
                 </button>
                 <button class="btn__edit">
@@ -483,21 +755,16 @@
       </div>
     </div>
   </body>
-<script>
-
-</script>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
     integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   ></script>
-
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"
   ></script>
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/table.js"></script>
+  <script src="../assets/js/pagination.js"></script>
 </html>

@@ -1,50 +1,3 @@
-
-$(function () {
-  $("#navigation").load("../../component/sideNav.html");
-});
-$(function () {
-  $("#header__right").load("../../component/topNav.html");
-});
-$(document).ready(function () {
-  $("#content").css("display", "none");
-
-  $("#content").fadeIn(2000);
-
-  $("a.transition").click(function (event) {
-    event.preventDefault();
-    linkLocation = this.href;
-    $("#content").fadeOut(1000, redirectPage);
-  });
-
-  function redirectPage() {
-    window.location = linkLocation;
-  }
-});
-
-$(document).ready(function(){
-  $('#ticketTable').after('<div id="pageNav"></div>');
-  var visibleRows = 5;
-  var totalRows = $('#ticketTable tbody tr').length;
-  var numPages = totalRows/visibleRows;
-  for(i = 0;i < numPages;i++) {
-      var pageNum = i + 1;
-      $('#pageNav').append('<a href="#" rel="'+i+'">'+pageNum+'</a> ');
-  }
-  $('#ticketTable tbody tr').hide();
-  $('#ticketTable tbody tr').slice(0, visibleRows).show();
-  $('#pageNav a:first').addClass('activePage');
-  $('#pageNav a').bind('click', function(){
-
-      $('#pageNav a').removeClass('activePage');
-      $(this).addClass('activePage');
-      var currPage = $(this).attr('rel');
-      var startItem = currPage * visibleRows;
-      var endItem = startItem + visibleRows;
-      $('#ticketTable tbody tr').css('opacity','0.0').hide().slice(startItem, endItem).
-      css('display','table-row').animate({opacity:1}, 300);
-  });
-});
-
 // #CHART
 // set the dimensions and margins of the graph
 var width = 450;
@@ -61,6 +14,7 @@ var svg = d3
   .attr("width", width)
   .attr("height", height)
   .attr("viewBox", "0 300 700 250")
+  .attr("class", "svgContent svgContent__first")
   .append("g")
   .attr("transform", "translate(" + width / 2 + "," + "350" + ")");
 
@@ -149,9 +103,7 @@ svg
   .attr("text-anchor", "left")
   .style("alignment-baseline", "middle");
 
-// --++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// set the dimensions and margins of the graph
-
+// ---------------------Second Chart----------------------
 // set the dimensions and margins of the graph
 var width = 450;
 height = 350;
@@ -166,6 +118,7 @@ var svg2 = d3
   .append("svg")
   .attr("width", width)
   .attr("height", height)
+  .attr("class", "svgContent svgContent__second")
   .attr("viewBox", "0 300 700 250")
   .append("g")
   .attr("transform", "translate(" + width / 2 + "," + "350" + ")");
@@ -265,6 +218,7 @@ var svg3 = d3
   .append("svg")
   .attr("width", width)
   .attr("height", height)
+  .attr("class", "svgContent svgContent__third")
   .attr("viewBox", "25 300 700 250")
   .append("g")
   .attr("transform", "translate(" + width / 2 + "," + "350" + ")");
@@ -272,7 +226,7 @@ var svg3 = d3
 // Create dummy data
 var data = {
   "In Progress": 20,
-  "Closed": 50,
+  Closed: 50,
   "Raised and Closed": 100,
   "Closed Call Not Connected": 40,
 };
@@ -358,4 +312,3 @@ svg3
   })
   .attr("text-anchor", "left")
   .style("alignment-baseline", "middle");
-
